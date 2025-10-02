@@ -76,7 +76,7 @@ namespace Project1 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DarkSlateGray;
-			this->ClientSize = System::Drawing::Size(1220, 611);
+			this->ClientSize = System::Drawing::Size(1500, 800);
 			this->Controls->Add(this->inputBox);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->Generate);
