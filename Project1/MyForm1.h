@@ -53,8 +53,6 @@ namespace Project1 {
 					}
 				}
 			}
-
-			GenerateCircleLayout();
 		}
 
 	protected:
@@ -334,30 +332,6 @@ namespace Project1 {
 
 				// GET THE MAX FLOW
 				maxFlow += pathFlow;
-			}
-		}
-
-		void GenerateCircleLayout() {
-			int W = this->ClientSize.Width;
-			int H = this->ClientSize.Height;
-
-			int margin = 120;
-			int topReserved = 110;
-
-			// Center of the usable area (leaving space above)
-			PointF center(
-				(float)W / 2.0f,
-				(float)(topReserved + (H - topReserved) / 2.0f)
-			);
-
-			float radius = (float)Math::Min(W, (H - topReserved)) / 2.0f - margin;
-			if (radius < 40) radius = 40; // minimum security
-
-			for (int i = 0; i < receivedValue; i++) {
-				double angle = 2.0 * Math::PI * i / receivedValue;
-				int x = (int)(center.X + radius * Math::Cos(angle));
-				int y = (int)(center.Y + radius * Math::Sin(angle));
-				positions[i] = Point(x, y);
 			}
 		}
 

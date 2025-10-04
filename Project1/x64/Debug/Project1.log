@@ -1,40 +1,40 @@
 ﻿  MyForm.cpp
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm.cpp')
   
   MyForm1.cpp
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm1.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm1.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm1.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'MyForm1.cpp')
   
   Source.cpp
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'Source.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(242,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'Source.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'Source.cpp')
   
-C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(258,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'Source.cpp')
   
   Generating Code...
