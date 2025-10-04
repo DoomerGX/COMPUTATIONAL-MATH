@@ -15,6 +15,8 @@ namespace Project1 {
 		MyForm1(void)
 		{
 			InitializeComponent();
+			this->DoubleBuffered = true; // TO AVOID FLICKERING
+			this->ResizeRedraw = true; // REDRAW WHEN RESIZING
 		}
 
 		MyForm1(int v)
@@ -51,6 +53,8 @@ namespace Project1 {
 					}
 				}
 			}
+
+			GenerateCircleLayout();
 		}
 
 	protected:
@@ -135,41 +139,78 @@ namespace Project1 {
 			if (this->DesignMode) return;
 
 			Graphics^ g = e->Graphics;
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
+
 			Pen^ pen = gcnew Pen(Color::White, 2);
 			Pen^ arrowPen = gcnew Pen(Color::White, 2);
 			arrowPen->CustomEndCap = gcnew System::Drawing::Drawing2D::AdjustableArrowCap(5, 5);
 
-			int cx = this->ClientSize.Width / 2 - 70;
-			int cy = this->ClientSize.Height / 2 - 70;
 			int nodeRadius = 15;
+			int minDistance = 100;
 
-			// GENERATION OF DISTANCES
-			int minDistance = 100; // MIN DISTANCE BETWEEN NODES
+			// Useful area (avoid covering the controls above)
+			int margin = 80;
+			int topReserved = 110; // button + label
+			int W = this->ClientSize.Width;
+			int H = this->ClientSize.Height;
+
+			// If there are no positions yet, generate random ones within the useful area
 			for (int i = 0; i < receivedValue; i++) {
 				if (positions[i].IsEmpty) {
 					bool valid = false;
 					Point candidate;
-
-					while (!valid) {
-						// RANDOM COORDINATES
-						int x = rand->Next(100, cx + 900);
-						int y = rand->Next(100, cy + 600);
+					int attempts = 0;
+					while (!valid && attempts < 2000) {
+						attempts++;
+						int x = rand->Next(margin, Math::Max(margin + 1, W - margin));
+						int y = rand->Next(topReserved, Math::Max(topReserved + 1, H - margin));
 						candidate = Point(x, y);
-
 						valid = true;
 						for (int k = 0; k < i; k++) {
 							int dx = candidate.X - positions[k].X;
 							int dy = candidate.Y - positions[k].Y;
-							double dist = Math::Sqrt(dx * dx + dy * dy);
-							if (dist < minDistance) {
-								valid = false; // IT DETECS IF THE NODES ARE TOO CLOSE
-								break;
-							}
+							double dist = Math::Sqrt((double)dx * dx + (double)dy * dy);
+							if (dist < minDistance) { valid = false; break; }
 						}
 					}
+					if (!valid) candidate = Point(margin + (i * 25) % (W - 2 * margin),
+						topReserved + ((i * 35) % (H - topReserved - margin)));
 					positions[i] = candidate;
 				}
 			}
+
+			// --- CENTER + SCALING ---
+			// actual bounding box
+			int minX = Int32::MaxValue, minY = Int32::MaxValue, maxX = Int32::MinValue, maxY = Int32::MinValue;
+			for (int i = 0; i < receivedValue; i++) {
+				minX = Math::Min(minX, positions[i].X);
+				minY = Math::Min(minY, positions[i].Y);
+				maxX = Math::Max(maxX, positions[i].X);
+				maxY = Math::Max(maxY, positions[i].Y);
+			}
+			int graphW = Math::Max(1, maxX - minX);
+			int graphH = Math::Max(1, maxY - minY);
+
+			// Scale to fit the useful rectangle (with margins)
+			float availW = (float)(W - 2 * margin);
+			float availH = (float)(H - topReserved - margin);
+			float scale = 1.0f;
+			// Only scale if the graphic is larger than the usable area
+			if (graphW > availW || graphH > availH) {
+				float sx = availW / (float)graphW;
+				float sy = availH / (float)graphH;
+				scale = Math::Min(sx, sy);
+			}
+
+			// We center: we take (minX,minY) to (0,0), scale, and move to the center of the useful area
+			float drawW = graphW * scale;
+			float drawH = graphH * scale;
+			float offsetX = (W - drawW) / 2.0f - (minX * scale);
+			float offsetY = (topReserved + (availH - drawH) / 2.0f) - (minY * scale);
+
+			// We apply transformation to the graphics (first scale, then translate)
+			g->TranslateTransform(offsetX, offsetY);
+			g->ScaleTransform(scale, scale);
 
 			// DRAW LINES
 			for (int i = 0; i < receivedValue; i++) {
@@ -293,6 +334,30 @@ namespace Project1 {
 
 				// GET THE MAX FLOW
 				maxFlow += pathFlow;
+			}
+		}
+
+		void GenerateCircleLayout() {
+			int W = this->ClientSize.Width;
+			int H = this->ClientSize.Height;
+
+			int margin = 120;
+			int topReserved = 110;
+
+			// Center of the usable area (leaving space above)
+			PointF center(
+				(float)W / 2.0f,
+				(float)(topReserved + (H - topReserved) / 2.0f)
+			);
+
+			float radius = (float)Math::Min(W, (H - topReserved)) / 2.0f - margin;
+			if (radius < 40) radius = 40; // minimum security
+
+			for (int i = 0; i < receivedValue; i++) {
+				double angle = 2.0 * Math::PI * i / receivedValue;
+				int x = (int)(center.X + radius * Math::Cos(angle));
+				int y = (int)(center.Y + radius * Math::Sin(angle));
+				positions[i] = Point(x, y);
 			}
 		}
 

@@ -1,1 +1,42 @@
-﻿
+﻿  MyForm.cpp
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm.cpp')
+  
+  MyForm1.cpp
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm1.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm1.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm1.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'MyForm1.cpp')
+  
+  Source.cpp
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(244,8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\Project1\MyForm1.h(260,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Source.cpp')
+  
+  Generating Code...
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project1.vcxproj -> C:\Users\liotg\source\repos\COMPUTATIONAL-MATH\x64\Debug\Project1.exe

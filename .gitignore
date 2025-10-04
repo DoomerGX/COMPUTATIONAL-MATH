@@ -1,0 +1,23 @@
+## Visual Studio / C++ / Build Files ##
+
+# Carpeta de configuración de usuario
+.vs/
+
+# Archivos de depuración y salida de compilación
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.obj
+*.ilk
+*.pdb
+*.suo
+*.user
+
+# Otros archivos generados por el IDE
+*.[Cc]fg
+*.opensdf
+*.sdf
+*.log
